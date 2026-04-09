@@ -6,7 +6,7 @@ import {
 } from "@/components/ui/select";
 import { allBranches, allDistricts, allCommunities, allCollegeTypes } from "@/data/colleges";
 import { Branch, CollegeType, Community } from "@/types/college";
-import { Search, X, SlidersHorizontal } from "lucide-react";
+import { SearchCheck, XCircle, Settings2 } from "lucide-react";
 
 export interface Filters {
   cutoff: string;
@@ -45,7 +45,7 @@ export default function FilterPanel({ filters, onFiltersChange, onSearch, onClea
       <div className="flex items-center justify-between mb-5">
         <div className="flex items-center gap-2.5">
           <div className="p-2 rounded-xl bg-primary/15">
-            <SlidersHorizontal className="w-4 h-4 text-primary" />
+            <Settings2 className="w-4 h-4 text-primary" />
           </div>
           <h2 className="text-base font-semibold text-foreground">Filters</h2>
           {resultCount > 0 && (
@@ -154,7 +154,7 @@ export default function FilterPanel({ filters, onFiltersChange, onSearch, onClea
               onClick={onSearch}
               className="bg-primary hover:bg-primary/90 text-primary-foreground glow-primary transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] px-6"
             >
-              <Search className="w-4 h-4 mr-1.5" />
+              <SearchCheck className="w-4 h-4 mr-1.5" />
               Search Colleges
             </Button>
             {hasFilters && (
@@ -163,7 +163,7 @@ export default function FilterPanel({ filters, onFiltersChange, onSearch, onClea
                 onClick={onClear}
                 className="text-muted-foreground hover:text-foreground"
               >
-                <X className="w-4 h-4 mr-1" />
+                <XCircle className="w-4 h-4 mr-1" />
                 Clear
               </Button>
             )}

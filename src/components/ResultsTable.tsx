@@ -1,6 +1,6 @@
 import { College, Community } from "@/types/college";
 import { usePriority } from "@/context/PriorityContext";
-import { Plus, Check, GraduationCap } from "lucide-react";
+import { PlusCircle, CheckCircle2, School2 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 interface ResultsTableProps {
@@ -25,7 +25,7 @@ export default function ResultsTable({ results, community, searched }: ResultsTa
     return (
       <div className="glass rounded-2xl p-12 text-center animate-fade-in">
         <div className="mx-auto w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-4">
-          <GraduationCap className="w-8 h-8 text-primary/60" />
+          <School2 className="w-8 h-8 text-primary/60" />
         </div>
         <h3 className="text-lg font-semibold text-foreground mb-2">Find Your College</h3>
         <p className="text-muted-foreground text-sm max-w-md mx-auto">
@@ -39,7 +39,7 @@ export default function ResultsTable({ results, community, searched }: ResultsTa
     return (
       <div className="glass rounded-2xl p-12 text-center animate-fade-in">
         <div className="mx-auto w-16 h-16 rounded-2xl bg-destructive/10 flex items-center justify-center mb-4">
-          <GraduationCap className="w-8 h-8 text-destructive/60" />
+          <School2 className="w-8 h-8 text-destructive/60" />
         </div>
         <h3 className="text-lg font-semibold text-foreground mb-2">No Colleges Found</h3>
         <p className="text-muted-foreground text-sm">Try adjusting your filters to see more results.</p>
@@ -99,7 +99,7 @@ export default function ResultsTable({ results, community, searched }: ResultsTa
                           : "bg-primary/10 text-primary hover:bg-primary/25 hover:scale-110 active:scale-95"
                       }`}
                     >
-                      {added ? <Check className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
+                      {added ? <CheckCircle2 className="w-4 h-4" /> : <PlusCircle className="w-4 h-4" />}
                     </button>
                   </td>
                 </tr>
@@ -127,7 +127,7 @@ export default function ResultsTable({ results, community, searched }: ResultsTa
                     added ? "bg-emerald-500/15 text-emerald-400" : "bg-primary/10 text-primary hover:bg-primary/25"
                   }`}
                 >
-                  {added ? <Check className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
+                  {added ? <CheckCircle2 className="w-4 h-4" /> : <PlusCircle className="w-4 h-4" />}
                 </button>
               </div>
               <div className="flex items-center gap-2">

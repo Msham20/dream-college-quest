@@ -10,7 +10,7 @@ import {
 import { CSS } from "@dnd-kit/utilities";
 import { usePriority } from "@/context/PriorityContext";
 import { PriorityCollege } from "@/types/college";
-import { ArrowLeft, GripVertical, Trash2, Download, ListOrdered, GraduationCap } from "lucide-react";
+import { ChevronLeft, GripVertical, Trash2, FileDown, ClipboardList, School2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 function SortableCard({ item, onRemove }: { item: PriorityCollege; onRemove: () => void }) {
@@ -106,11 +106,11 @@ export default function Priorities() {
               to="/"
               className="p-2 rounded-xl hover:bg-secondary/30 text-muted-foreground hover:text-foreground transition-all"
             >
-              <ArrowLeft className="w-5 h-5" />
+              <ChevronLeft className="w-5 h-5" />
             </Link>
             <div className="flex items-center gap-2">
               <div className="p-1.5 rounded-xl bg-primary/15">
-                <ListOrdered className="w-5 h-5 text-primary" />
+                <ClipboardList className="w-5 h-5 text-primary" />
               </div>
               <h1 className="text-lg font-bold text-foreground">Priority List</h1>
               {priorities.length > 0 && (
@@ -128,7 +128,7 @@ export default function Priorities() {
                 onClick={handleExport}
                 className="text-muted-foreground hover:text-foreground"
               >
-                <Download className="w-4 h-4 mr-1.5" />
+                <FileDown className="w-4 h-4 mr-1.5" />
                 <span className="hidden sm:inline">Export</span>
               </Button>
               <Button
@@ -150,7 +150,7 @@ export default function Priorities() {
         {priorities.length === 0 ? (
           <div className="glass rounded-2xl p-12 text-center animate-fade-in">
             <div className="mx-auto w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-4">
-              <GraduationCap className="w-8 h-8 text-primary/60" />
+              <School2 className="w-8 h-8 text-primary/60" />
             </div>
             <h3 className="text-lg font-semibold text-foreground mb-2">No Colleges Added</h3>
             <p className="text-muted-foreground text-sm mb-5 max-w-sm mx-auto">
